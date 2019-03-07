@@ -4,22 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.search.SearchActivity">
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="in.androidmate.anujgupta.movify.ui.main.MainActivity"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        tools:context="in.androidmate.anujgupta.movify.ui.search.SearchActivity">
 
         <include
             android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
+            layout="@layout/toolbar"
+            />
+
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvMovies"
+            android:id="@+id/rvQueryResult"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 
@@ -27,8 +30,9 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
         />
 
 </RelativeLayout>
